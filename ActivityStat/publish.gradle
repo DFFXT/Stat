@@ -1,0 +1,18 @@
+apply plugin:'maven-publish'
+
+
+
+afterEvaluate {
+    publishing{
+        publications{
+            mavenJava(MavenPublication){
+                groupId = 'com.github.DFFXT'
+                artifactId = 'ActivityStat'
+                version = '1.2'
+                // artifact androidSourcesJar
+                from components.debug
+                //artifact bundleReleaseAar
+            }
+        }
+    }
+}
